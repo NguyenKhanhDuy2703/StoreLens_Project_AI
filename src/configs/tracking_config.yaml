@@ -1,0 +1,18 @@
+# Cấu hình chung
+app:
+  device: '0' # 'cpu' để dùng CPU, '0' để dùng GPU đầu tiên
+
+# Cấu hình cho module phát hiện YOLOv8
+yolov8:
+  model_path: "Models/yolov8n_openvino_model" # Đường dẫn đến mô hình YOLOv8 đã chuyển đổi sang OpenVINO
+  confidence_threshold: 0.4 # ngưỡng tin cậy
+  iou_threshold: 0.45 
+  classes: 0 # class 0 là người
+
+# Cấu hình cho module theo dõi DeepSORT
+deepsort:
+  max_cosine_distance: 0.5 # ngưỡng khoảng cách cosine(ngoại hình)
+  max_iou_distance: 0.7 # ngưỡng khoảng cách iou
+  max_age: 150 # tuổi thọ của đấu vết 
+  n_init: 3 # số khung hình đầu để khởi tạo một đối tượng mới
+  nn_budget: 100 # ngân sách bộ nhớ cho mô hình nn

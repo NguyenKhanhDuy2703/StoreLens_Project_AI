@@ -1,0 +1,19 @@
+# --- Web API ---
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# --- AI & Image Processing ---
+ultralytics         # Thư viện chính thức cho YOLOv8, đã tích hợp sẵn tracker
+torch
+torchvision
+opencv-python>=4.8  
+#--- Yaml ---
+pyyaml
+# ---handle form data---
+python-multipart
+# --- Video Processing ---
+tempfile # Thư viện để xử lý tạm thời các file video
+shutil  # Thư viện để xử lý file và thư mục
+OpenVINO  # Thư viện của Intel để tối ưu hóa mô hình AI trên các thiết bị của Intel

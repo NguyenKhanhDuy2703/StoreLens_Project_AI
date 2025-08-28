@@ -17,3 +17,5 @@ python-multipart
 tempfile # Thư viện để xử lý tạm thời các file video
 shutil  # Thư viện để xử lý file và thư mục
 OpenVINO  # Thư viện của Intel để tối ưu hóa mô hình AI trên các thiết bị của Intel
+# --- variable environment ---
+python-dotenv

@@ -2,6 +2,8 @@ from ..utils.config_loader import load_config
 import cv2
 from .yolov8_model import YOLOv8Model
 from .deepsort_model import DeepSortModel
+from ..processing.stream_processor import stream_processor
+
 
 class ObjectTracking:
     def __init__(self, config_path='src/configs/tracking_config.yaml'):
@@ -68,3 +70,9 @@ class ObjectTracking:
         cap.release()
         cv2.destroyAllWindows()
         return data_tracking
+    
+    def run_stream(self, stream_url = stream_processor('src/configs/camera_config.yaml') ):
+       DEFAULT_VIDEO_PATH = r"D:\NCKH\AI\src\data\videos\video_2.mp4"
+       DEFAULT_IMAGE_PATH = r"D:\NCKH\AI\src\data\images\image_1.jpg"  
+       data =  self.track_video( DEFAULT_VIDEO_PATH )
+       return data
